@@ -1,0 +1,42 @@
+@import '@styles/_theme.scss';
+
+a {
+  color: $anchorPrimary;
+  text-decoration: none;
+}
+
+// markdown override
+div p img {
+  display: block;
+  margin: auto;
+  max-width: 75%;
+}
+
+pre code {
+  &:after {
+    display: none;
+  }
+}
+
+blockquote {
+  font-size: 0.875rem;
+  font-style: italic;
+  background: #f9f9f9;
+  border-left: 6px solid #ccc;
+  margin: 1.5rem;
+  padding: 1rem;
+  quotes: '\201C' '\201D' '\2018' '\2019';
+
+  &:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25rem;
+    vertical-align: -0.4em;
+  }
+
+  p {
+    display: inline;
+  }
+}

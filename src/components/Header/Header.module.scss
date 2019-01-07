@@ -1,0 +1,24 @@
+@import '@styles/_theme.scss';
+
+.container {
+  height: $headerHeight;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  color: $textPrimary;
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 0.75rem;
+}
+
+.sub {
+  color: $textAlternate;
+  text-align: center;
+  font-size: 1.125rem;
+}

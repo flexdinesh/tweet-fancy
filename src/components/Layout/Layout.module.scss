@@ -1,0 +1,21 @@
+@import '@styles/_theme.scss';
+
+.page-wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 90%;
+
+  @media (min-width: 845.9px) {
+    max-width: 769px;
+  }
+}
+
+.content-container {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 960px;
+  min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
