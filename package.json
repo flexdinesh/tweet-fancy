@@ -24,6 +24,7 @@
     "test:util": "jest"
   },
   "dependencies": {
+    "browser-or-node": "^1.1.0",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-manifest": "^2.0.9",
@@ -32,6 +33,7 @@
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-sharp": "^2.1.8",
+    "marked": "^0.6.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
