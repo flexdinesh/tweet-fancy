@@ -27,12 +27,18 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
+    "test:util": "jest",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "gatsby-plugin-sass": "^2.0.7",
+    "jest": "^23.6.0",
     "node-sass": "^4.11.0",
-    "prettier": "^1.15.2"
+    "prettier": "^1.15.2",
+    "regenerator-runtime": "^0.13.1"
   },
   "repository": {
     "type": "git",
@@ -40,5 +46,11 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "jest": {
+    "verbose": true,
+    "roots": [
+      "<rootDir>/src/"
+    ]
   }
 }
