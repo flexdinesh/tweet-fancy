@@ -1,9 +1,28 @@
 {
   "name": "gatsby-starter-default",
+  "version": "0.1.0",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
+  "keywords": [
+    "gatsby"
+  ],
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "license": "MIT",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "start": "npm run develop",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "test:util": "jest"
+  },
   "dependencies": {
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
@@ -18,18 +37,6 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test:util": "jest",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
-  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "babel-core": "^7.0.0-bridge.0",
@@ -40,17 +47,10 @@
     "prettier": "^1.15.2",
     "regenerator-runtime": "^0.13.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
   "jest": {
-    "verbose": true,
     "roots": [
       "<rootDir>/src/"
-    ]
+    ],
+    "verbose": true
   }
 }
