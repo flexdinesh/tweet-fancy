@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from '@components/Layout'
 import SEO from '@components/seo'
+import Intro from '@components/Intro'
+import Editor from '@components/Editor'
 
 const IndexPage = () => (
   <Layout>
@@ -15,9 +17,8 @@ const IndexPage = () => (
         `strikethrough`,
       ]}
     />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Intro />
+    <Editor />
   </Layout>
 )
 

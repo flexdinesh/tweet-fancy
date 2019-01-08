@@ -1,0 +1,55 @@
+@import '@styles/_theme.scss';
+@import '@styles/_breakpoints.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+
+  @include breakpoint-medium-down {
+    flex-direction: column;
+  }
+}
+
+.editor-wrapper {
+  flex-basis: 50%;
+  width: 100%;
+
+  &:nth-of-type(1) {
+    padding-right: 1rem;
+
+    @include breakpoint-medium-down {
+      padding-right: 0;
+    }
+  }
+
+  &:nth-of-type(2) {
+    padding-left: 1rem;
+
+    @include breakpoint-medium-down {
+      padding-left: 0;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  color: $textPrimary;
+  text-transform: uppercase;
+}
+
+.text-area {
+  color: $textPrimary;
+  padding: 0.75rem;
+  font-size: 0.925rem;
+  border-radius: 0.25rem;
+  border: 1px solid $borderGrey;
+  border: 1px solid darken($borderGrey, 10%);
+  height: 8rem;
+  width: 100%;
+  resize: none;
+}
