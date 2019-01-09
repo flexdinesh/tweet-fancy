@@ -1,20 +1,25 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "tweetfancy.io",
   "version": "0.1.0",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Tweet with bold, italics and strikethough text",
   "keywords": [
-    "gatsby"
+    "tweet",
+    "markdown",
+    "format",
+    "bold",
+    "italics",
+    "strikethrough"
   ],
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/flexdinesh/tweet-fancy/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/flexdinesh/tweet-fancy"
   },
   "license": "MIT",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dinesh Pandiyan <flexdinesh@gmail.com>",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
