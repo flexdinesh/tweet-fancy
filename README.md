@@ -1,10 +1,12 @@
 # [`tweetfancy.io`](http://tweetfancy.io)
 
-Every fancy to tweet in bold, italics or strikethrough text?
+Ever fancied tweeting with **bold**, _italics_ or ~~strikethrough~~ text?
 
 Twitter may not support it but you **can**.
 
 Write in markdown and grab your fancy text.
+
+🚀 [https://tweetfancy.io](https://tweetfancy.io)
 
 ## License
 
