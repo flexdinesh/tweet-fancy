@@ -2,7 +2,7 @@ import React from 'react'
 import './TwitterShare.styles.scss'
 
 const TwitterShare = ({ tweetText }) => {
-  const url = `https://twitter.com/intent/tweet/?text=${tweetText}&amp;url=http%3A%2F%2Ftweetfancy.io`
+  const url = `https://twitter.com/intent/tweet/?text=${tweetText}&amp;url=https%3A%2F%2Ftweetfancy.io`
   return (
     <>
       <a
