@@ -8,15 +8,20 @@ const Intro = () => {
         Ever fancied tweeting with <b>bold</b>, <i>italics</i> or{' '}
         <s>strikethough</s> text? Now you can! 🚀
       </div>
+      <div className={styles.firstLine}>
+        Write your text in markdown 📝 and grab your tweet 🎁
+      </div>
       {/* <div>Write your text in markdown and grab your tweet.</div> */}
-      <div className={styles.helpSyntax}>
-        Use two asterisks for <b>bold</b>. **I am bold.**
-      </div>
-      <div className={styles.helpSyntax}>
-        Use one underscore for <i>italics</i>. _I am italics._
-      </div>
-      <div className={styles.helpSyntax}>
-        Use two tildes to <s>strikethrough</s>. ~~Scratch this.~~
+      <div className={styles.syntaxWrapper}>
+        <div className={styles.helpSyntax}>
+          Use two asterisks for <b>bold</b>. **I am bold.**
+        </div>
+        <div className={styles.helpSyntax}>
+          Use one underscore for <i>italics</i>. _I am italics._
+        </div>
+        <div className={styles.helpSyntax}>
+          Use two tildes to <s>strikethrough</s>. ~~Scratch this.~~
+        </div>
       </div>
     </center>
   )

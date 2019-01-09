@@ -4,6 +4,7 @@
 .container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 2rem 0;
 
@@ -38,7 +39,7 @@
   font-size: 0.875rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
-  color: $textPrimary;
+  color: $colorPrimary;
   text-transform: uppercase;
 }
 
@@ -52,4 +53,12 @@
   height: 8rem;
   width: 100%;
   resize: none;
+}
+
+.twitter-wrapper {
+  flex-grow: 1;
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

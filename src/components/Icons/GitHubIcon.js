@@ -11,7 +11,7 @@ const svgStyle = {
 }
 
 const pathStyle = {
-  fill: '#999',
+  fill: '#5badf0',
 }
 
 const GitHubIcon = () => {
