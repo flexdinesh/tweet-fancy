@@ -1,6 +1,6 @@
 import marked from 'marked'
 import { isBrowser } from 'browser-or-node'
-import { boldMap } from './text-maps'
+import { boldMap, italicsMap, strikethroughMap } from './text-maps'
 
 // let JSDOMref
 // if (NODE_ENV === 'test') {
@@ -26,13 +26,17 @@ export const getBoldTextForStr = str =>
     .map(s => boldMap[s] || s)
     .join('')
 
-export const getEmphasizedTextForStr = str => {
-  return 'emphasized'
-}
+export const getEmphasizedTextForStr = str =>
+  str
+    .split('')
+    .map(s => italicsMap[s] || s)
+    .join('')
 
-export const getStrikethroughTextForStr = str => {
-  return 'strikethrough'
-}
+export const getStrikethroughTextForStr = str =>
+  str
+    .split('')
+    .map(s => strikethroughMap[s] || s)
+    .join('')
 
 export const convertMDToUTF = mdInput => {
   let htmlStr = marked(mdInput)
