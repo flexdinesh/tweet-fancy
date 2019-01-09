@@ -20,7 +20,11 @@ class Editor extends Component {
 
   handleOnTextEdit(event) {
     const i = event.target.value
-    this.setState({ mdText: i, outputText: convertMDToUTF(i) })
+    if (i) {
+      this.setState({ mdText: i, outputText: convertMDToUTF(i) })
+    } else {
+      this.setState({ mdText: i, outputText: i })
+    }
   }
 
   render() {
