@@ -6,7 +6,7 @@ const Footer = () => (
     <div>
       <span>© Copyright 2019 </span>
       <a
-        href="https://twitter/flexdinesh"
+        href="https://twitter.com/flexdinesh"
         className={styles.link}
         target="blank"
       >
