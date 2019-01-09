@@ -1,5 +1,5 @@
 import marked from 'marked'
-import { isBrowser } from 'browser-or-node'
+import { isBrowser, isNode } from 'browser-or-node'
 import { boldMap, italicsMap, strikethroughMap } from './text-maps'
 
 // let JSDOMref
@@ -39,6 +39,10 @@ export const getStrikethroughTextForStr = str =>
     .join('')
 
 export const convertMDToUTF = mdInput => {
+  if (isNode) {
+    return mdInput
+  }
+
   let htmlStr = marked(mdInput)
   let doc = getDocument(htmlStr)
   const pTag = doc.querySelector('p')

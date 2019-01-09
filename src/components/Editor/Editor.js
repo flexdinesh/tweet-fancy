@@ -4,6 +4,7 @@ import styles from './Editor.module.scss'
 import { convertMDToUTF } from './mdUtil'
 
 const defaultMDText = `It's super easy to tweet in **bold** or _italics_. You can even write with ~~strikethrough~~.`
+const defaultOutputText = `It's super easy to tweet in 𝗯𝗼𝗹𝗱 or 𝘪𝘵𝘢𝘭𝘪𝘤𝘴. You can even write with s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶.`
 
 class Editor extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Editor extends Component {
 
     this.state = {
       mdText: defaultMDText,
-      outputText: convertMDToUTF(defaultMDText),
+      outputText: defaultOutputText,
     }
 
     this.handleOnTextEdit = this.handleOnTextEdit.bind(this)

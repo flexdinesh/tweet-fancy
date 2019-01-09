@@ -21,10 +21,12 @@
   "license": "MIT",
   "author": "Dinesh Pandiyan <flexdinesh@gmail.com>",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run clean && gatsby build",
+    "clean": "rm -rf .cache public",
     "develop": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "start": "npm run develop",
+    "serve:build": "http-server ./public",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "test:util": "jest"
   },
@@ -49,6 +51,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "gatsby-plugin-sass": "^2.0.7",
+    "http-server": "^0.11.1",
     "jest": "^23.6.0",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.2",

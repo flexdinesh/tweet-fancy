@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Intro.module.scss'
 
+/* eslint-disable jsx-a11y/accessible-emoji */
 const Intro = () => {
   return (
     <center>
@@ -26,5 +27,6 @@ const Intro = () => {
     </center>
   )
 }
+/* eslint-enable jsx-a11y/accessible-emoji */
 
 export default Intro

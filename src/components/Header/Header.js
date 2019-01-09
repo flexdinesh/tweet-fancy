@@ -5,7 +5,7 @@ import styles from './Header.module.scss'
 const Header = () => (
   <header className={styles.container}>
     <a
-      href="https://github.com/flexdinesh"
+      href="https://github.com/flexdinesh/tweet-fancy"
       target="_blank"
       rel="noopener noreferrer"
     >
