@@ -45,25 +45,32 @@ export const convertMDToUTF = mdInput => {
 
   let htmlStr = marked(mdInput)
   let doc = getDocument(htmlStr)
-  const pTag = doc.querySelector('p')
+  const allPTags = doc.querySelectorAll('p')
 
-  const allStrongTags = pTag.querySelectorAll('strong')
-  allStrongTags.forEach(element => {
-    const textInTag = element.textContent
-    element.innerHTML = getBoldTextForStr(textInTag)
+  let textContent = ''
+  allPTags.forEach(pTag => {
+    const allStrongTags = pTag.querySelectorAll('strong')
+    allStrongTags.forEach(element => {
+      const textInTag = element.textContent
+      element.innerHTML = getBoldTextForStr(textInTag)
+    })
+
+    const allEmTags = pTag.querySelectorAll('em')
+    allEmTags.forEach(element => {
+      const textInTag = element.textContent
+      element.innerHTML = getEmphasizedTextForStr(textInTag)
+    })
+
+    const allDelTags = pTag.querySelectorAll('del')
+    allDelTags.forEach(element => {
+      const textInTag = element.textContent
+      element.innerHTML = getStrikethroughTextForStr(textInTag)
+    })
+
+    // temp fix for not including multiple lines
+    // should figure out a way to share multiline tweets
+    textContent = textContent + ' ' + pTag.textContent
   })
 
-  const allEmTags = pTag.querySelectorAll('em')
-  allEmTags.forEach(element => {
-    const textInTag = element.textContent
-    element.innerHTML = getEmphasizedTextForStr(textInTag)
-  })
-
-  const allDelTags = pTag.querySelectorAll('del')
-  allDelTags.forEach(element => {
-    const textInTag = element.textContent
-    element.innerHTML = getStrikethroughTextForStr(textInTag)
-  })
-
-  return pTag.textContent
+  return textContent
 }
