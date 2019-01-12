@@ -3,16 +3,17 @@ import TwitterShare from '@components/TwitterShare'
 import styles from './Editor.module.scss'
 import { convertMDToUTF } from './mdUtil'
 
-const defaultMDText = `It's super easy to tweet in **bold** or _italics_. You can even write with ~~strikethrough~~.`
-const defaultOutputText = `It's super easy to tweet in 𝗯𝗼𝗹𝗱 or 𝘪𝘵𝘢𝘭𝘪𝘤𝘴. You can even write with s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶.`
+const defaultMDContent = `It's super easy to tweet in **bold** or _italics_. You can even write with ~~strikethrough~~.`
+const defaultTextContent = `It's super easy to tweet in 𝗯𝗼𝗹𝗱 or 𝘪𝘵𝘢𝘭𝘪𝘤𝘴. You can even write with s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶.`
 
 class Editor extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      mdText: defaultMDText,
-      outputText: defaultOutputText,
+      mdContent: defaultMDContent,
+      htmlContent: defaultTextContent,
+      textContent: defaultTextContent,
     }
 
     this.handleOnTextEdit = this.handleOnTextEdit.bind(this)
@@ -20,15 +21,21 @@ class Editor extends Component {
 
   handleOnTextEdit(event) {
     const i = event.target.value
+    const { htmlOutput, textOutput } = convertMDToUTF(i)
+
     if (i) {
-      this.setState({ mdText: i, outputText: convertMDToUTF(i) })
+      this.setState({
+        mdContent: i,
+        htmlContent: htmlOutput,
+        textContent: textOutput,
+      })
     } else {
-      this.setState({ mdText: i, outputText: i })
+      this.setState({ mdContent: i, htmlContent: i, textContent: i })
     }
   }
 
   render() {
-    const { mdText, outputText } = this.state
+    const { mdContent, htmlContent, textContent } = this.state
 
     return (
       <div className={styles.container}>
@@ -37,7 +44,7 @@ class Editor extends Component {
           <textarea
             className={styles.textArea}
             onChange={this.handleOnTextEdit}
-            value={mdText}
+            value={mdContent}
           />
         </div>
         <div className={styles.editorWrapper}>
@@ -46,12 +53,11 @@ class Editor extends Component {
             className={styles.textArea}
             contentEditable
             suppressContentEditableWarning
-          >
-            {outputText}
-          </div>
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+          />
         </div>
         <div className={styles.twitterWrapper}>
-          <TwitterShare tweetText={outputText} />
+          <TwitterShare tweetText={textContent} />
         </div>
       </div>
     )

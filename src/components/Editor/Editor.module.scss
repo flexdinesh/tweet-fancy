@@ -28,6 +28,9 @@
   &:nth-of-type(2) {
     padding-left: 1rem;
 
+    > div {
+      overflow: scroll;
+    }
     @include breakpoint-medium-down {
       padding-left: 0;
     }
