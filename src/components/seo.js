@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: `/icons/icon-48x48.png`,
+                content: `/icons/icon-256x256.png`,
               },
               {
                 name: `twitter:card`,
