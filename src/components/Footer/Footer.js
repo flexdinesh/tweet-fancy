@@ -10,7 +10,7 @@ const Footer = () => (
         className={styles.link}
         target="blank"
       >
-        Dineshkumar Pandiyan
+        Dinesh Pandiyan
       </a>
     </div>
   </footer>
