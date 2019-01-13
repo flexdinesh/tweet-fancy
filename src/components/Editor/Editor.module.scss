@@ -29,7 +29,7 @@
     padding-left: 1rem;
 
     > div {
-      overflow: scroll;
+      overflow: auto;
     }
     @include breakpoint-medium-down {
       padding-left: 0;
