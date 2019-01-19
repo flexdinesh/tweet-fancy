@@ -4,6 +4,7 @@ import styles from './Editor.module.scss'
 import { convertMDToUTF } from './mdUtil'
 
 const defaultMDContent = `It's super easy to tweet in **bold** or _italics_. You can even write with ~~strikethrough~~.`
+const defaultHtmlContent = `<p>It's super easy to tweet in <strong>𝗯𝗼𝗹𝗱</strong> or <em>𝘪𝘵𝘢𝘭𝘪𝘤𝘴</em>. You can even write with <del>s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶</del>. </p>`
 const defaultTextContent = `It's super easy to tweet in 𝗯𝗼𝗹𝗱 or 𝘪𝘵𝘢𝘭𝘪𝘤𝘴. You can even write with s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶.`
 
 class Editor extends Component {
@@ -12,7 +13,7 @@ class Editor extends Component {
 
     this.state = {
       mdContent: defaultMDContent,
-      htmlContent: defaultTextContent,
+      htmlContent: defaultHtmlContent,
       textContent: defaultTextContent,
     }
 
