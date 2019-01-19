@@ -12,7 +12,7 @@
 
 .content-container {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 960px;
   min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
   display: flex;

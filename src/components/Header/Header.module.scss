@@ -20,5 +20,14 @@
 .sub {
   color: $textAlternate;
   text-align: center;
-  font-size: 1.125rem;
+  line-height: 1.4;
+
+  > span {
+    box-decoration-break: clone;
+    line-height: 1;
+    border-radius: 1px;
+    background: lighten($highlightBG, 7.5%);
+    color: $highlightText;
+    padding: 0 0.375rem 0.065rem;
+  }
 }

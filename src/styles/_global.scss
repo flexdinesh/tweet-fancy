@@ -1,4 +1,31 @@
 @import '@styles/_theme.scss';
+@import '@styles/_mixins.scss';
+
+html {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  @include font-size-reset;
+  @include smooth-font;
+  color: $textPrimary;
+  background-color: $colorBG;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  @include font-size-reset;
+  @include smooth-font;
+  color: $textPrimary;
+  line-height: 1.6;
+  background-color: $colorBG;
+}
+
+.wf-loading {
+  visibility: hidden;
+}
+
+.wf-active,
+.wf-inactive {
+  visibility: visible;
+}
 
 a {
   color: $anchorPrimary;

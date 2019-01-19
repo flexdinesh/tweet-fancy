@@ -27,6 +27,14 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Open+Sans:400,700:latin'],
+        },
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-analytics`,

@@ -13,7 +13,7 @@ const Header = () => (
     </a>
     <h1 className={styles.h1}>tweetfancy.io</h1>
     <div className={styles.sub}>
-      Tweet with bold, italics and strikethough text
+      <span>Tweet with bold, italics and strikethough text</span>
     </div>
   </header>
 )

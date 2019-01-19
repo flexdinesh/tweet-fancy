@@ -1,0 +1,29 @@
+@import '@styles/_theme.scss';
+@import '@styles/_breakpoints.scss';
+
+@mixin anchor-style {
+  color: $textPrimary;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+@mixin smooth-font {
+  $smoothTextShadowColor: rgba(0, 0, 0, 0.01) 0 0 1px;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: $smoothTextShadowColor;
+}
+
+@mixin font-size-reset {
+  font-size: 16px;
+
+  @include breakpoint-large-up {
+    font-size: 18px;
+  }
+}
