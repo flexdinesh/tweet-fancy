@@ -4,12 +4,12 @@ import './TwitterShare.styles.scss'
 const TwitterShare = ({ tweetText }) => {
   const url = `https://twitter.com/intent/tweet/?text=${encodeURI(
     tweetText
-  )}%0D%0A&amp;url=https%3A%2F%2Ftweetfancy.io`
+  )}&amp;url=https%3A%2F%2Ftweetfancy.io`
   return (
     <>
       <a
         className="resp-sharing-button__link"
-        href={url}
+        href={{ toString: () => url }}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on Twitter"

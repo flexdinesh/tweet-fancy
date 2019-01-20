@@ -4,20 +4,34 @@ import styles from './Editor.module.scss'
 import { convertMDToUTF } from './mdUtil'
 
 const defaultMDContent = `It's super easy to tweet in **bold** or _italics_. You can even write with ~~strikethrough~~.`
-const defaultHtmlContent = `<p>It's super easy to tweet in <strong>𝗯𝗼𝗹𝗱</strong> or <em>𝘪𝘵𝘢𝘭𝘪𝘤𝘴</em>. You can even write with <del>s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶</del>. </p>`
-const defaultTextContent = `It's super easy to tweet in 𝗯𝗼𝗹𝗱 or 𝘪𝘵𝘢𝘭𝘪𝘤𝘴. You can even write with s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶.`
+// const defaultHtmlContent = `<p>It's super easy to tweet in <strong>𝗯𝗼𝗹𝗱</strong> or <em>𝘪𝘵𝘢𝘭𝘪𝘤𝘴</em>. You can even write with <del>s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶</del>. </p>`
+// const defaultTextContent = `It's super easy to tweet in 𝗯𝗼𝗹𝗱 or 𝘪𝘵𝘢𝘭𝘪𝘤𝘴. You can even write with s̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶.`
 
 class Editor extends Component {
   constructor(props) {
     super(props)
 
+    const mdContent = defaultMDContent
+    const { htmlOutput, textOutput } = convertMDToUTF(mdContent)
+
     this.state = {
-      mdContent: defaultMDContent,
-      htmlContent: defaultHtmlContent,
-      textContent: defaultTextContent,
+      mdContent,
+      htmlContent: htmlOutput,
+      textContent: textOutput,
     }
 
     this.handleOnTextEdit = this.handleOnTextEdit.bind(this)
+  }
+
+  componentDidMount() {
+    const { mdContent } = this.state
+    const { htmlOutput, textOutput } = convertMDToUTF(mdContent)
+
+    this.setState({
+      mdContent,
+      htmlContent: htmlOutput,
+      textContent: textOutput,
+    })
   }
 
   handleOnTextEdit(event) {
@@ -37,7 +51,7 @@ class Editor extends Component {
 
   render() {
     const { mdContent, htmlContent, textContent } = this.state
-
+    console.log({ htmlContent, textContent })
     return (
       <div className={styles.container}>
         <div className={styles.editorWrapper}>
@@ -54,7 +68,9 @@ class Editor extends Component {
             className={styles.textArea}
             contentEditable
             suppressContentEditableWarning
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
+            dangerouslySetInnerHTML={{
+              __html: { toString: () => htmlContent },
+            }}
           />
         </div>
         <div className={styles.twitterWrapper}>

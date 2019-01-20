@@ -40,7 +40,8 @@ export const getStrikethroughTextForStr = str =>
 
 export const convertMDToUTF = mdInput => {
   if (isNode) {
-    return mdInput
+    let htmlStr = marked(mdInput)
+    return { htmlOutput: htmlStr, textOutput: mdInput }
   }
 
   let htmlStr = marked(mdInput)
