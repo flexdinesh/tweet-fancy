@@ -18,15 +18,6 @@ body {
   background-color: $colorBG;
 }
 
-.wf-loading {
-  visibility: hidden;
-}
-
-.wf-active,
-.wf-inactive {
-  visibility: visible;
-}
-
 a {
   color: $anchorPrimary;
   text-decoration: none;
