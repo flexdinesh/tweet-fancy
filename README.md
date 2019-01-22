@@ -8,7 +8,7 @@ Write in markdown and grab your fancy text.
 
 🚀 [https://tweetfancy.io](https://tweetfancy.io)
 
-###### _Note: The generated bold, italics and strikethrough texts are [UTF Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols). Screen readers and other assistive technologies might find it difficult to interpret the generated text._
+###### _Note: The generated bold, italics and strikethrough texts are [UTF Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols). So if you run them by a screen reader, you'll find that the reader reads them out by their symbol name. But then, all screen readers struggle reading smileys too (🎉🔥🚀🦄😎) and that doesn't stop us from using smileys. So,we might use this as well._
 
 ## License
 
