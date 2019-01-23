@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `tweetfancy.io`,
-    description: `Tweet in bold, italics and strikethough text`,
+    description: `Tweet in bold, italics and strikethrough text`,
     author: `@flexdinesh`,
   },
   plugins: [

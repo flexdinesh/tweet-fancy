@@ -2,7 +2,7 @@
   "name": "tweetfancy.io",
   "version": "0.1.0",
   "private": true,
-  "description": "Tweet with bold, italics and strikethough text",
+  "description": "Tweet with bold, italics and strikethrough text",
   "keywords": [
     "tweet",
     "markdown",

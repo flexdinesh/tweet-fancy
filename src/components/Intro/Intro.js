@@ -7,7 +7,7 @@ const Intro = () => {
     <center>
       <div className={styles.firstLine}>
         Ever fancied tweeting with <b>bold</b>, <i>italics</i> or{' '}
-        <s>strikethough</s> text? Now you can! 🚀
+        <s>strikethrough</s> text? Now you can! 🚀
       </div>
       <div className={styles.firstLine}>
         Write your text in markdown 📝 and grab your tweet 🎁

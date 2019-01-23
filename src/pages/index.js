@@ -7,7 +7,7 @@ import Editor from '@components/Editor'
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Tweet Fancy in bold, italics and strikethough text"
+      title="Tweet Fancy in bold, italics and strikethrough text"
       keywords={[
         `tweet`,
         `markdown`,
